@@ -23,7 +23,7 @@ jmp←{i+←⍵}
 nop←{i+←1}
 ins←'|'(≠⊆⊢)inp
 f←{i←1⋄prev←⍬⋄a←0⋄{(i∊prev)∨i>≢ins:(i>≢ins)/a⋄prev⊢←prev,i⋄x←⍎⊃⍵[i]⋄∇⍵}⍵}
-f¨({'nop'⎕R'jmp'@⍵⊢ins}¨⍸'n'=l),{'jmp'⎕R'nop'@⍵⊢ins}¨⍸'j'=l←⊃¨ins
+f¨({'no'⎕R'jm'@⍵⊢ins}¨⍸'n'=l),{'jm'⎕R'no'@⍵⊢ins}¨⍸'j'=l←⊃¨ins
 
 ∇
 
