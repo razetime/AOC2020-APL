@@ -13,7 +13,7 @@ ins←'|'(≠⊆⊢)inp
 ∇
 
 ∇f
-⍝ Part 2:
+⍝ Part 2(streamlined with Adam's help):
 
 a←0
 i←1
@@ -23,7 +23,7 @@ jmp←{i+←⍵}
 nop←{i+←1}
 ins←'|'(≠⊆⊢)inp
 f←{i←1⋄prev←⍬⋄a←0⋄{(i∊prev)∨i>≢ins:(i>≢ins)/a⋄prev⊢←prev,i⋄x←⍎⊃⍵[i]⋄∇⍵}⍵}
-f¨({('nop'⎕R'jmp')@⍵⊢ins}¨⍸{⊃'nop'⍷⍵}¨ins),{('jmp'⎕R'nop')@⍵⊢ins}¨⍸{⊃'jmp'⍷⍵}¨ins
+f¨({'nop'⎕R'jmp'@⍵⊢ins}¨⍸'n'=l),{'jmp'⎕R'nop'@⍵⊢ins}¨⍸'j'=l←⊃¨ins
 
 ∇
 
