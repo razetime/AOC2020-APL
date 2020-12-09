@@ -1,4 +1,5 @@
 ⍝ Day 7: bare assembly intepreter
+⍝ Took a while to get the dfns working
 
 ∇f
 ⍝ Part 1:
